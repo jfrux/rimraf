@@ -1,11 +1,9 @@
 component name="rimraf" extends="foundry.core" {
 	variables.path = require("path");
 	variables.fs = require("fs");
-	variables.e = require("emitter");
-	variables._ = require("util").init();
+	variables._ = require("util");
 	variables.console = require("console");
-
-	this['emitter'] = new foundry.core.emitter();
+	//mixin("emitter");
 	variables.isWindows = (server.os.name CONTAINS "windows");
 
 	// for EMFILE handling
